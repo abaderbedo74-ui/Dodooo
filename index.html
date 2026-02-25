@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegance Boutique - متجر الفساتين يدوية الصنع</title>
+  <meta name="description" content="متجر متخصص في الفساتين يدوية الصنع - فساتين سهرة، خطوبة، كوكتيل ويومية">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+</head>
+<body>
+  <!-- الهيدر -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">👗</div>
+          <span class="logo-text">Elegance <span>Boutique</span></span>
+        </a>
+        
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">الرئيسية</a>
+          <a href="shop.html" class="nav-link">المتجر</a>
+          <a href="offers.html" class="nav-link">العروض</a>
+          <a href="contact.html" class="nav-link">اتصل بنا</a>
+        </nav>
+        
+        <div class="header-actions">
+          <button class="icon-btn" data-auth onclick="window.location.href='login.html'">👤</button>
+          <button class="icon-btn" data-user style="display: none;">
+            <span class="user-name"></span> 🚪
+          </button>
+          <button class="icon-btn" onclick="window.location.href='cart.html'">
+            🛒
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">✨ تصاميم حصرية 2024</div>
+          <h1 class="hero-title">فساتين يدوية الصنع <span>بأناقة لا مثيل لها</span></h1>
+          <p class="hero-description">اكتشف مجموعتنا الفريدة من الفساتين اليدوية الصنع، مصممة خصيصاً لتجعلكي تتألقين في كل مناسبة.</p>
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn btn-primary">تسوق الآن <span>→</span></a>
+            <a href="offers.html" class="btn btn-secondary">شاهد العروض</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">تصميم فريد</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10K+</div>
+              <div class="stat-label">سعيدة</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">رضا</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800" alt="فستان سهرة فاخر" class="hero-img-main">
+          <div class="hero-floating hero-floating-1">🎀 تصاميم حصرية</div>
+          <div class="hero-floating hero-floating-2">🧵 جودة يدوية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المميزات -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3 class="feature-title">توصيل مجاني</h3>
+          <p class="feature-desc">للطلبات فوق 500 ريال</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧵</div>
+          <h3 class="feature-title">صنع يدوي</h3>
+          <p class="feature-desc">اهتمام بكل تفصيل</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">↩️</div>
+          <h3 class="feature-title">استرجاع سهل</h3>
+          <p class="feature-desc">خلال 14 يوم</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">دفع آمن</h3>
+          <p class="feature-desc">تشفير كامل</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفئات -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">تصفح حسب الفئة</h2>
+      <p class="section-subtitle">اختر الفئة المناسبة لمناسبتك</p>
+      <div class="categories-grid">
+        <div class="category-card" onclick="window.location.href='shop.html?category=evening'">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="فساتين سهرة" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">فساتين سهرة</h3>
+            <span class="category-count">15 فستان</span>
+          </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='shop.html?category=engagement'">
+          <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600" alt="فساتين خطوبة" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">فساتين خطوبة</h3>
+            <span class="category-count">15 فستان</span>
+          </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='shop.html?category=cocktail'">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600" alt="فساتين كوكتيل" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">فساتين كوكتيل</h3>
+            <span class="category-count">10 فساتين</span>
+          </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='shop.html?category=daily'">
+          <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600" alt="فساتين يومية" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">فساتين يومية</h3>
+            <span class="category-count">10 فساتين</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المنتجات المميزة -->
+  <section class="section" style="background: var(--bg-card);">
+    <div class="container">
+      <h2 class="section-title">أحدث التشكيلات</h2>
+      <p class="section-subtitle">قطعة مختارة خصيصاً لك</p>
+      <div class="products-grid" id="products-grid"></div>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="shop.html" class="btn btn-primary">عرض كل المنتجات <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- بانر -->
+  <section class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h2>خصم 30% على تشكيلات الخطوبة</h2>
+          <p>هذه الفترة المحدودة للحصول على فستان خطوبتك الحلم بسعر خاص!</p>
+          <a href="offers.html" class="btn btn-accent">تسوق الآن</a>
+        </div>
+        <div class="banner-image">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600" alt="خصم خاص">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- آراء العملاء -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="section-title">آراء عملائنا</h2>
+      <p class="section-subtitle">ماذا يقولون عنا</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">فستان أكثر من رائع! الجودة جداً عالية والتطريز يدوي مذهل.</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة" class="author-img">
+            <div class="author-info"><h4>سارة محمد</h4><span>الرياض</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">تجربة تسوق رائعة، والتوصيل كان سريع جداً.</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="منى" class="author-img">
+            <div class="author-info"><h4>منى أحمد</h4><span>جدة</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">فستان خطوبتي كان أحلامى! شكراً للفريق على الخدمة الممتازة.</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="نورة" class="author-img">
+            <div class="author-info"><h4>نورة الغامدي</h4><span>الدمام</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">👗</div>
+            <span class="logo-text">Elegance <span>Boutique</span></span>
+          </a>
+          <p>متجرك الأول للفساتين يدوية الصنع. نصنع أحلامك بأناقة ودقة.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📸</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">📌</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="offers.html">العروض</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">الفئات</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=evening">فساتين سهرة</a></li>
+            <li><a href="shop.html?category=engagement">فساتين خطوبة</a></li>
+            <li><a href="shop.html?category=cocktail">فساتين كوكتيل</a></li>
+            <li><a href="shop.html?category=daily">فساتين يومية</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاسترجاع</a></li>
+            <li><a href="#">طرق الدفع</a></li>
+            <li><a href="#">الأسئلة الشائعة</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Elegance Boutique. جميع الحقوق محفوظة</p>
+        <div class="payment-methods">
+          <div class="payment-icon">💳</div>
+          <div class="payment-icon">💳</div>
+          <div class="payment-icon">💳</div>
+          <div class="payment-icon">💳</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('products-grid');
+      if (container) {
+        renderProducts(products.slice(0, 8), container);
+      }
+    });
+  </script>
+</body>
+</html>

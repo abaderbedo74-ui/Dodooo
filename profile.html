@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملف الشخصي - Elegance Boutique</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+</head>
+<body>
+  <!-- الهيدر -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">👗</div>
+          <span class="logo-text">Elegance <span>Boutique</span></span>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">الرئيسية</a>
+          <a href="shop.html" class="nav-link">المتجر</a>
+          <a href="offers.html" class="nav-link">العروض</a>
+          <a href="contact.html" class="nav-link">اتصل بنا</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn" data-auth onclick="window.location.href='login.html'">👤</button>
+          <button class="icon-btn" data-user style="display: none;"><span class="user-name"></span> 🚪</button>
+          <button class="icon-btn" onclick="window.location.href='cart.html'">🛒<span class="cart-badge" style="display: none;">0</span></button>
+          <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- رأس الصفحة -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">الملف الشخصي</h1>
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <span>الملف الشخصي</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الملف الشخصي -->
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-grid">
+        <!-- معلومات المستخدم -->
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="الصورة الشخصية" id="profile-avatar-img">
+              <button class="avatar-edit-btn" onclick="document.getElementById('avatar-input').click()">📷</button>
+              <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+            </div>
+            <div class="profile-info">
+              <h2 id="profile-name">مرحباً!</h2>
+              <p id="profile-email">user@email.com</p>
+              <span class="member-since">عضو منذ: <span id="member-date">يناير 2024</span></span>
+            </div>
+          </div>
+          
+          <!-- نموذج البيانات الشخصية -->
+          <form class="profile-form" onsubmit="updateProfile(event)">
+            <h3>📝 البيانات الشخصية</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">الاسم الكامل</label>
+                <input type="text" name="name" class="form-input" id="input-name" placeholder="اسمك الكامل">
+              </div>
+              <div class="form-group">
+                <label class="form-label">البريد الإلكتروني</label>
+                <input type="email" name="email" class="form-input" id="input-email" placeholder="your@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">رقم الهاتف</label>
+                <input type="tel" name="phone" class="form-input" id="input-phone" placeholder="05xxxxxxxx">
+              </div>
+              <div class="form-group">
+                <label class="form-label">العنوان</label>
+                <input type="text" name="address" class="form-input" id="input-address" placeholder="العنوان بالتفصيل">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+          </form>
+        </div>
+        
+        <!-- الطلبات الأخيرة -->
+        <div class="orders-card">
+          <h3>📦 طلباتي الأخيرة</h3>
+          <div class="orders-list" id="orders-list">
+            <!-- الطلبات ستظهر هنا -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon">👗</div><span class="logo-text">Elegance <span>Boutique</span></span></a>
+          <p>متجرك الأول للفساتين يدوية الصنع.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="offers.html">العروض</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">الفئات</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=evening">فساتين سهرة</a></li>
+            <li><a href="shop.html?category=engagement">فساتين خطوبة</a></li>
+            <li><a href="shop.html?category=cocktail">فساتين كوكتيل</a></li>
+            <li><a href="shop.html?category=daily">فساتين يومية</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاسترجاع</a></li>
+            <li><a href="#">طرق الدفع</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Elegance Boutique. جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // تحميل بيانات الملف الشخصي
+    document.addEventListener('DOMContentLoaded', function() {
+      const user = JSON.parse(localStorage.getItem('currentUser'));
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      if (!user) {
+        window.location.href = 'login.html';
+        return;
+      }
+      
+      // البحث عن بيانات المستخدم الكاملة
+      const fullUser = users.find(u => u.email === user.email) || user;
+      
+      // تحديث المعلومات
+      document.getElementById('profile-name').textContent = fullUser.name || 'مرحباً!';
+      document.getElementById('profile-email').textContent = fullUser.email;
+      document.getElementById('input-name').value = fullUser.name || '';
+      document.getElementById('input-email').value = fullUser.email || '';
+      document.getElementById('input-phone').value = fullUser.phone || '';
+      document.getElementById('input-address').value = fullUser.address || '';
+      
+      // تاريخ العضوية
+      const joinDate = fullUser.joinDate || new Date().toISOString();
+      const date = new Date(joinDate);
+      const months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+      document.getElementById('member-date').textContent = months[date.getMonth()] + ' ' + date.getFullYear();
+      
+      // تحميل الطلبات
+      loadOrders();
+    });
+    
+    // تحديث الملف الشخصي
+    function updateProfile(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const name = form.querySelector('[name="name"]').value;
+      const email = form.querySelector('[name="email"]').value;
+      const phone = form.querySelector('[name="phone"]').value;
+      const address = form.querySelector('[name="address"]').value;
+      
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // تحديث بيانات المستخدم
+      const userIndex = users.findIndex(u => u.email === currentUser.email);
+      if (userIndex > -1) {
+        users[userIndex].name = name;
+        users[userIndex].phone = phone;
+        users[userIndex].address = address;
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+      
+      // تحديث session
+      currentUser.name = name;
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
+      
+      // تحديث الواجهة
+      document.getElementById('profile-name').textContent = name;
+      document.getElementById('input-name').value = name;
+      
+      showToast('تم تحديث بياناتك بنجاح', 'success');
+    }
+    
+    // تحميل الطلبات
+    function loadOrders() {
+      const orders = JSON.parse(localStorage.getItem('orders')) || [];
+      const container = document.getElementById('orders-list');
+      
+      if (orders.length === 0) {
+        container.innerHTML = `
+          <div class="empty-orders">
+            <span style="font-size: 3rem;">📦</span>
+            <p>لا توجد طلبات سابقة</p>
+            <a href="shop.html" class="btn btn-primary" style="margin-top: 16px;">تصفح المنتجات</a>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = orders.slice(0, 5).map(order => `
+        <div class="order-item">
+          <div class="order-header">
+            <span class="order-id">#${order.id}</span>
+            <span class="order-status ${order.status}">${getStatusText(order.status)}</span>
+          </div>
+          <div class="order-details">
+            <p>${order.items.length} منتج</p>
+            <p class="order-total">الإجمالي: ${formatPrice(order.total)}</p>
+          </div>
+          <div class="order-date">${new Date(order.date).toLocaleDateString('ar-EG')}</div>
+        </div>
+      `).join('');
+    }
+    
+    function getStatusText(status) {
+      const statuses = {
+        'pending': 'قيد الانتظار',
+        'processing': 'قيد التجهيز',
+        'shipped': 'تم الشحن',
+        'delivered': 'تم التسليم'
+      };
+      return statuses[status] || status;
+    }
+  </script>
+</body>
+</html>

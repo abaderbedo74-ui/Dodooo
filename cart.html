@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سلة التسوق - Elegance Boutique</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">👗</div>
+          <span class="logo-text">Elegance <span>Boutique</span></span>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">الرئيسية</a>
+          <a href="shop.html" class="nav-link">المتجر</a>
+          <a href="offers.html" class="nav-link">العروض</a>
+          <a href="contact.html" class="nav-link">اتصل بنا</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn" data-auth onclick="window.location.href='login.html'">👤</button>
+          <button class="icon-btn" data-user style="display: none;"><span class="user-name"></span> 🚪</button>
+          <button class="icon-btn" onclick="window.location.href='cart.html'">🛒<span class="cart-badge" style="display: none;">0</span></button>
+          <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">سلة التسوق</h1>
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <span>سلة التسوق</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cart-section">
+    <div class="container">
+      <div class="cart-grid">
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+          <h3 class="summary-title">ملخص الطلب</h3>
+          <div class="summary-row"><span>عدد المنتجات</span><span id="cart-count">0</span></div>
+          <div class="summary-row"><span>المجموع الفرعي</span><span id="cart-subtotal">0 ₽</span></div>
+          <div class="summary-row"><span>الخصم</span><span style="color: var(--accent);">- 0 ₽</span></div>
+          <div class="summary-row"><span>التوصيل</span><span style="color: #27AE60;">مجاني</span></div>
+          <div class="summary-row total"><span>الإجمالي</span><span id="cart-total">0 ₽</span></div>
+          <div class="coupon-form">
+            <input type="text" class="coupon-input" placeholder="كود الخصم">
+            <button class="btn btn-secondary">تطبيق</button>
+          </div>
+          <a href="checkout.html" class="btn btn-primary" style="width: 100%;">إتمام الشراء <span>→</span></a>
+          <div style="text-align: center; margin-top: 20px; color: var(--text-light); font-size: 0.875rem;">🔒 دفع آمن ومشفّر</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon">👗</div><span class="logo-text">Elegance <span>Boutique</span></span></a>
+          <p>متجرك الأول للفساتين يدوية الصنع.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📸</a>
+            <a href="#" class="social-link">🐦</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="offers.html">العروض</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">الفئات</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=evening">فساتين سهرة</a></li>
+            <li><a href="shop.html?category=engagement">فساتين خطوبة</a></li>
+            <li><a href="shop.html?category=cocktail">فساتين كوكتيل</a></li>
+            <li><a href="shop.html?category=daily">فساتين يومية</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاسترجاع</a></li>
+            <li><a href="#">طرق الدفع</a></li>
+            <li><a href="#">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Elegance Boutique. جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() { renderCart(); });
+  </script>
+</body>
+</html>

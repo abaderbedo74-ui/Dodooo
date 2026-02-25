@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العروض - Elegance Boutique</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">👗</div>
+          <span class="logo-text">Elegance <span>Boutique</span></span>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">الرئيسية</a>
+          <a href="shop.html" class="nav-link">المتجر</a>
+          <a href="offers.html" class="nav-link active">العروض</a>
+          <a href="contact.html" class="nav-link">اتصل بنا</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn" data-auth onclick="window.location.href='login.html'">👤</button>
+          <button class="icon-btn" data-user style="display: none;"><span class="user-name"></span> 🚪</button>
+          <button class="icon-btn" onclick="window.location.href='cart.html'">🛒<span class="cart-badge" style="display: none;">0</span></button>
+          <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="offers-hero">
+    <div class="container">
+      <h1>خصومات حصرية</h1>
+      <p>وفر حتى 50% على تشكيلاتنا المختارة</p>
+      <div class="timer-section" id="timer">
+        <div class="timer-item"><div class="timer-number" id="days">00</div><div class="timer-label">يوم</div></div>
+        <div class="timer-item"><div class="timer-number" id="hours">00</div><div class="timer-label">ساعة</div></div>
+        <div class="timer-item"><div class="timer-number" id="minutes">00</div><div class="timer-label">دقيقة</div></div>
+        <div class="timer-item"><div class="timer-number" id="seconds">00</div><div class="timer-label">ثانية</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="offer-banner">
+        <div>
+          <h3>خصم 30% على فساتين الخطوبة</h3>
+          <p>تشكيلة محدودة - предложение ограничено</p>
+        </div>
+        <a href="shop.html?category=engagement" class="btn btn-primary">تسوق الآن</a>
+      </div>
+      
+      <h2 class="section-title">العروض المميزة</h2>
+      <p class="section-subtitle">أفضل الأسعار على تشكيلاتنا الحصرية</p>
+      <div class="products-grid" id="products-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon">👗</div><span class="logo-text">Elegance <span>Boutique</span></span></a>
+          <p>متجرك الأول للفساتين يدوية الصنع.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">الفئات</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=evening">فساتين سهرة</a></li>
+            <li><a href="shop.html?category=engagement">فساتين خطوبة</a></li>
+            <li><a href="shop.html?category=cocktail">فساتين كوكتيل</a></li>
+            <li><a href="shop.html?category=daily">فساتين يومية</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاسترجاع</a></li>
+            <li><a href="#">طرق الدفع</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Elegance Boutique. جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('products-grid');
+      if (container) {
+        const offerProducts = products.filter(p => p.badge && (p.badge.includes('خصم') || p.badge.includes('مبيع') || p.badge.includes('VIP')));
+        renderProducts(offerProducts.slice(0, 8), container);
+      }
+    });
+  </script>
+</body>
+</html>
